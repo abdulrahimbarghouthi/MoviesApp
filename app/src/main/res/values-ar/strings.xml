@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">MoviesApp</string>
+    <string name="no_internet_connection">لا يوجد اتصال بالانترنت</string>
+    <string name="something_went_wrong">حدث خطأ</string>
+    <string name="retry">إعادة المحاولة</string>
+</resources>
