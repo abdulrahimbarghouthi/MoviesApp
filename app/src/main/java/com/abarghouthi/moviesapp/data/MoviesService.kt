@@ -4,12 +4,10 @@ import android.content.Context
 import androidx.compose.ui.text.intl.Locale
 import com.abarghouthi.moviesapp.BuildConfig
 import com.abarghouthi.moviesapp.data.models.MovieDetailsDto
-import com.abarghouthi.moviesapp.data.models.MovieDto
 import com.abarghouthi.moviesapp.data.models.MoviesResponse
 import okhttp3.Cache
 import okhttp3.OkHttpClient
 import okhttp3.logging.HttpLoggingInterceptor
-import retrofit2.Response
 import retrofit2.Retrofit
 import retrofit2.converter.gson.GsonConverterFactory
 import retrofit2.http.GET
@@ -40,7 +38,7 @@ interface MoviesService {
 
         fun create(applicationContext: Context): MoviesService {
             val clientBuilder = OkHttpClient.Builder()
-                .cache(Cache(applicationContext.cacheDir,10 * 1024 * 1024)) // 5MB
+                .cache(Cache(applicationContext.cacheDir, 10 * 1024 * 1024))
             if (BuildConfig.DEBUG) {
                 val logger = HttpLoggingInterceptor().apply {
                     level = HttpLoggingInterceptor.Level.BODY
